@@ -35,3 +35,8 @@ function imprimirTarefa() {
     tarefasContainer.appendChild(divTarefa)
   }
 }
+const buttonLimpar = document.querySelector(".button-limpar")
+buttonLimpar.addEventListener("click", () => {
+  tarefasContainer.innerHTML = ""
+  tarefas = []
+})

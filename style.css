@@ -58,8 +58,13 @@ button:hover {
   height: 300px;
   overflow-y: auto;
 }
-
 .tarefaListada {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  padding: 2rem;
+}
+.tarefaListada p {
+  font-weight: 400;
+  font-size: 1.2rem;
 }
