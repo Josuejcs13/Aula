@@ -7,14 +7,23 @@
     <link rel="stylesheet" href="./style.css" />
     <title>Tarefa</title>
   </head>
+
   <body>
     <h1>Tarefas</h1>
     <div class="container">
       <div>
         <input type="text" />
+        <select id="tipoTarefa">
+          <option value="Trabalho">Trabalho</option>
+          <option value="Casa">Casa</option>
+          <option value="Estudo">Estudo</option>
+          <option value="Pessoal">Pessoal</option>
+        </select>
+
         <button class="button-add">adicionar</button>
         <button class="button-limpar">limpar</button>
       </div>
+      <ul class="tarefas"></ul>
       <div class="tarefas"></div>
       <script src="./script.js"></script>
     </div>

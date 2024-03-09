@@ -1,22 +1,28 @@
-const input = document.querySelector("input")
-const buttonAdd = document.querySelector(".button-add")
-const tarefasContainer = document.querySelector(".tarefas")
+const input = document.querySelector("input");
+const buttonAdd = document.querySelector(".button-add");
+const tarefasContainer = document.querySelector(".tarefas");
+const tipoTarefaSelecionada = document.querySelector("#tipoTarefa");
 
 let tarefas = []
 
 buttonAdd.addEventListener("click", addTarefa)
 
 function addTarefa() {
-  tarefas.push(input.value)
-  imprimirTarefa()
-  console.log(tarefas)
-  input.value = ""
+  const novaTarefa = {
+    texto: input.value,
+    tipo: tipoTarefaSelecionada.value,
+  };
+
+  tarefas.push(novaTarefa);
+  imprimirTarefa();
+  console.log(tarefas);
+  input.value = "";
 }
 
 function removerDiv(event) {
-  const textoSelecionado = event.target.parentElement.firstChild.innerText
-  tarefas = tarefas.filter((tarefa) => tarefa !== textoSelecionado)
-  imprimirTarefa()
+  const textoSelecionado = event.target.parentElement.firstChild.innerText;
+  tarefas = tarefas.filter((tarefa) => tarefa.texto !== textoSelecionado);
+  imprimirTarefa();
 }
 
 function imprimirTarefa() {
