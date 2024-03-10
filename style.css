@@ -4,6 +4,7 @@
   box-sizing: border-box;
   border: 0;
   scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -14,11 +15,15 @@ body {
   align-items: center;
   flex-direction: column;
 }
-
+.inputs {
+  display: flex;
+  gap: 0.5rem;
+}
 h1 {
   font-size: 3.5rem;
   color: white;
   padding-bottom: 0.8rem;
+  font-weight: 700;
 }
 
 button {
@@ -31,12 +36,14 @@ button {
     rgba(0, 0, 0, 0.17) 0px 12px 13px,
     rgba(0, 0, 0, 0.09) 0px -3px 5px;
   color: white;
-  font-weight: bolder;
+  font-weight: 500;
 }
 
 input {
+  width: 18rem;
   padding: 0.5rem;
   border-radius: 0.4rem;
+  margin-left: 5rem;
 }
 .button-add {
   background-color: green;
@@ -52,19 +59,36 @@ button:hover {
   display: flex;
   color: white;
   font-weight: 400;
-  gap: 1rem;
+
   flex-direction: column;
-  padding: 1rem;
-  height: 300px;
+
+  height: 26rem;
   overflow-y: auto;
 }
 .tarefaListada {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 1rem;
 }
 .tarefaListada p {
   font-weight: 400;
   font-size: 1.2rem;
+}
+.riscado {
+  text-decoration: line-through;
+}
+#tipoTarefa {
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #3f8bc9;
+  color: #fff;
+  border: 1px solid #333;
+  width: 6.8rem;
+}
+
+#tipoTarefa option {
+  background-color: #383636;
+  color: #fff;
+  padding: 8px;
 }
